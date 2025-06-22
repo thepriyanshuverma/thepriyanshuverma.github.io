@@ -66,6 +66,42 @@
       font-weight: bold;
       border-radius: 5px;
     }
+    .project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card h3 {
+  color: #0a192f;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  color: #333;
+  font-size: 0.95em;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #64ffda;
+  font-weight: bold;
+  text-decoration: none;
+}
+
   </style>
 </head>
 <body>
@@ -100,17 +136,25 @@
     </ul>
   </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Smart Disease Predictor (ML Project)</h3>
-      <p>Used machine learning algorithms to predict diseases from symptoms. Built with Python, Pandas, and Scikit-learn.</p>
+ <section id="projects">
+  <h2>Projects</h2>
+  <div class="project-cards">
+
+    <div class="project-card">
+      <h3>Smart Disease Predictor</h3>
+      <p>Machine learning project using Python & scikit-learn to predict diseases from symptoms.</p>
+      <a href="https://github.com/thepriyanshuverma/smart-disease-predictor" target="_blank">🔗 View on GitHub</a>
     </div>
-    <div class="project">
+
+    <div class="project-card">
       <h3>Personal Portfolio Website</h3>
-      <p>Responsive website built using HTML, CSS, and JavaScript to showcase resume, skills, and projects.</p>
+      <p>Responsive HTML, CSS & JS portfolio with contact form and animated typing effect.</p>
+      <a href="https://github.com/thepriyanshuverma/thepriyanshuverma.github.io" target="_blank">🔗 View on GitHub</a>
     </div>
-  </section>
+
+  </div>
+</section>
+
 
   <footer>
     <p>Connect with me: <a href="https://linkedin.com/in/priyanshu-verma-674a8a313" style="color:#64ffda;">LinkedIn</a> | Email: choudharypriyanshu9389@gmail.com</p>
