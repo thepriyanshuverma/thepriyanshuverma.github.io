@@ -6,6 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Priyanshu Verma | AI/ML Portfolio</title>
   <style>
+    #typing {
+  font-size: 1.2em;
+  color: #64ffda;
+  font-weight: bold;
+  font-family: monospace;
+}
+
     #contact {
   padding: 40px;
   background-color: #f1f1f1;
@@ -64,7 +71,7 @@
 <body>
   <header>
     <h1>Priyanshu Verma</h1>
-    <p>AI/ML Enthusiast | Web Developer | Tech Explorer</p>
+    <p><span id="typing"></span></p>
   </header>
 
   <nav>
@@ -118,6 +125,37 @@
     <button type="submit">Send Message</button>
   </form>
 </section>
+<script>
+  const text = ["AI/ML Enthusiast", "Web Developer", "Tech Explorer"];
+  let index = 0;
+  let charIndex = 0;
+  let currentText = '';
+  let isDeleting = false;
+  const typingElement = document.getElementById("typing");
+
+  function type() {
+    currentText = text[index];
+    
+    if (isDeleting) {
+      typingElement.innerText = currentText.substring(0, charIndex--);
+    } else {
+      typingElement.innerText = currentText.substring(0, charIndex++);
+    }
+
+    if (!isDeleting && charIndex === currentText.length) {
+      isDeleting = true;
+      setTimeout(type, 1000);
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      index = (index + 1) % text.length;
+      setTimeout(type, 300);
+    } else {
+      setTimeout(type, isDeleting ? 50 : 100);
+    }
+  }
+
+  type();
+</script>
 
 </body>
 </html>
