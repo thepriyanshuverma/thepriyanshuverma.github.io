@@ -101,23 +101,29 @@
   font-weight: bold;
   text-decoration: none;
 }
-@media screen and (max-width: 768px) {
-  nav {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav a {
-    margin: 10px 0;
-  }
-
-  .resume-btn {
-    margin-top: 10px;
-  }
-}
 
   </style>
+  <style>
+  /* existing styles... */
+
+  /* 📱 Mobile Responsive Fix */
+  @media screen and (max-width: 768px) {
+    nav {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    nav a {
+      margin: 10px 0;
+    }
+
+    .resume-btn {
+      margin-top: 10px;
+    }
+  }
+</style>
+
 </head>
 <body>
   <header>
